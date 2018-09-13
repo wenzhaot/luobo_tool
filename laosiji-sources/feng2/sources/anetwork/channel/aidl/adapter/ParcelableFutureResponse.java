@@ -1,0 +1,63 @@
+package anetwork.channel.aidl.adapter;
+
+import android.os.RemoteException;
+import anet.channel.util.ALog;
+import anet.channel.util.ErrorConstant;
+import anetwork.channel.Response;
+import anetwork.channel.aidl.NetworkResponse;
+import anetwork.channel.aidl.ParcelableFuture.Stub;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+
+/* compiled from: Taobao */
+public class ParcelableFutureResponse extends Stub {
+    private static final String TAG = "anet.ParcelableFutureResponse";
+    Future<Response> future;
+    NetworkResponse response;
+
+    public ParcelableFutureResponse(Future<Response> future) {
+        this.future = future;
+    }
+
+    public ParcelableFutureResponse(NetworkResponse networkResponse) {
+        this.response = networkResponse;
+    }
+
+    public boolean cancel(boolean z) throws RemoteException {
+        if (this.future == null) {
+            return true;
+        }
+        return this.future.cancel(z);
+    }
+
+    public boolean isCancelled() throws RemoteException {
+        if (this.future == null) {
+            return true;
+        }
+        return this.future.isCancelled();
+    }
+
+    public boolean isDone() throws RemoteException {
+        if (this.future == null) {
+            return true;
+        }
+        return this.future.isDone();
+    }
+
+    public NetworkResponse get(long j) throws RemoteException {
+        if (this.future != null) {
+            try {
+                return (NetworkResponse) this.future.get(j, TimeUnit.MILLISECONDS);
+            } catch (Throwable e) {
+                if ("NO SUPPORT".equalsIgnoreCase(e.getMessage())) {
+                    ALog.e(TAG, "[get]有listener将不支持future.get()方法，如有需要请listener传入null", null, e, new Object[0]);
+                }
+                return new NetworkResponse(ErrorConstant.ERROR_REQUEST_FAIL);
+            }
+        } else if (this.response != null) {
+            return this.response;
+        } else {
+            return new NetworkResponse(ErrorConstant.ERROR_REQUEST_FAIL);
+        }
+    }
+}
