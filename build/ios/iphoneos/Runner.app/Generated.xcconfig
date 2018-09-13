@@ -1,9 +1,9 @@
 // This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=/Users/tanwenzhao/Develop/Learning/flutter/flutter
-FLUTTER_APPLICATION_PATH=/Users/tanwenzhao/Develop/Learning/flutter/luobo_tool
-FLUTTER_TARGET=/Users/tanwenzhao/Develop/Learning/flutter/luobo_tool/lib/main.dart
+FLUTTER_ROOT=/Users/wenzhaot/Developer/flutter/flutter
+FLUTTER_APPLICATION_PATH=/Users/wenzhaot/Developer/mine/luobo_tool
+FLUTTER_TARGET=/Users/wenzhaot/Developer/mine/luobo_tool/lib/main.dart
 FLUTTER_BUILD_MODE=debug
 FLUTTER_BUILD_DIR=build
 SYMROOT=${SOURCE_ROOT}/../build/ios
-FLUTTER_FRAMEWORK_DIR=/Users/tanwenzhao/Develop/Learning/flutter/flutter/bin/cache/artifacts/engine/ios
+FLUTTER_FRAMEWORK_DIR=/Users/wenzhaot/Developer/flutter/flutter/bin/cache/artifacts/engine/ios
 PREVIEW_DART_2=true

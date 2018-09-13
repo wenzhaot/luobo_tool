@@ -10,6 +10,9 @@ dependencies:
   cupertino_icons: ^0.1.2
   dio: ^1.0.0
   json_annotation: ^0.2.3
+  intl: ^0.15.7
+  ktoast: ^1.0.2
+  dialog_loading: ^0.0.1
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,4 @@
-#Sun Aug 19 17:31:37 CST 2018
-base.0=/Users/tanwenzhao/Develop/Learning/flutter/luobo_tool/build/app/intermediates/transforms/dexMerger/debug/0
+#Thu Sep 13 14:21:30 CST 2018
+base.0=/Users/wenzhaot/Developer/mine/luobo_tool/build/app/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

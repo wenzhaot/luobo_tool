@@ -28,9 +28,6 @@ class BmobApi {
   );
 
   test() async {
-//    Dio dio = Dio(options);
-//    Response response = await dio.get('/video', data: {'order':'-createdAt','limit':'10'});
-//    print(response.data);
     getMovies();
   }
 
@@ -38,7 +35,15 @@ class BmobApi {
     Dio dio = Dio(options);
     Response response = await dio.get('/video', data: {'order':'-createdAt','limit':'10'});
     BmobResults results = new BmobResults.fromJson(response.data);
+    print(response.data);
     return results;
+  }
+
+  updateLaosijiUrl(String url, String objectId) async {
+    Dio dio = Dio(options);
+    Response response = await dio.put("/video/$objectId", data: {'laosijiLink':url,'visible':true});
+
+    print(response.data);
   }
 
 }

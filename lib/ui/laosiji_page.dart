@@ -23,11 +23,10 @@ class LaosijiPageState extends State<LaosijiPage> {
   }
 
   getAllMovies() async {
-    LaosijiApi().getMovies();
-//    BmobResults results = await BmobApi().getMovies();
-//    setState(() {
-//      mMovies = results.results;
-//    });
+    LaosijiResults results = await LaosijiApi().getMovies();
+    setState(() {
+      mMovies = results.results;
+    });
   }
 
   @override
