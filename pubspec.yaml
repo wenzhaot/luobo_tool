@@ -13,6 +13,7 @@ dependencies:
   intl: ^0.15.7
   ktoast: ^1.0.2
   dialog_loading: ^0.0.1
+  crypto: ^2.0.6
 
 dev_dependencies:
   flutter_test:

@@ -30,7 +30,7 @@ class MovieListItem extends StatelessWidget {
                 height: 200.0,
                 fadeInDuration: Duration(milliseconds: 50),
               ),
-              tag: "Movie-Tag-${_movie.title}",
+              tag: '${_movie.cover}____heroTag',
             ),
             Text(_movie.title),
           ],
